@@ -1,33 +1,16 @@
-import { LOADING, FETCHING_MORE } from '../types';
+import { LOADING } from '../types';
 const initialState = {
-  isLoading: false,
-  isRefreshing: false,
-  fetchingMore: false,
-  isCompleted: false,
+  loading: false,
 };
 
-const loadingReducer = (state = initialState, { type, payload }) => {
+const loadingReducer = (state = initialState, { type }) => {
   switch (type) {
     case LOADING:
       return {
         ...state,
-        isLoading: payload,
+        loading: !state.loading,
       };
-    // case REFRESHING:
-    //   return {
-    //     ...state,
-    //     isRefreshing: payload,
-    //   }
-    case FETCHING_MORE:
-      return {
-        ...state,
-        fetchingMore: payload,
-      };
-    // case COMPLETED:
-    //   return {
-    //     ...state,
-    //     isCompleted: payload
-    //   }
+
     default:
       return state;
   }

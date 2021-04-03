@@ -1,3 +1,5 @@
+import { Dimensions } from 'react-native';
+
 const colors = {
   black: '#000000',
   blue: '#002B55',
@@ -25,7 +27,12 @@ const colors = {
 
 const API_URL = 'https://jsonplaceholder.typicode.com/';
 
+const screenWidth = Dimensions.get('screen').width;
+const screenHeight = Dimensions.get('screen').height;
+
 export default {
   colors,
   API_URL,
+  screenHeight,
+  screenWidth,
 };

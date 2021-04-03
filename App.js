@@ -9,8 +9,6 @@ import { PhotoDetail, Photos } from './src/screens';
 
 const Drawer = createDrawerNavigator();
 
-console.log(store.getState(),'RO: this is store')
-
 export default function App() {
   return (
     <Provider store={store}>
