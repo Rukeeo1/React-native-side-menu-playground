@@ -8,3 +8,5 @@ This app was set up with expo client to simplify things and react navigation was
 
 ### This assumes you have expo client already installed and a simulator that can run the app
 
+- It uses redux for state management
+- React navigation
